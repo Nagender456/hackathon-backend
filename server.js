@@ -13,7 +13,7 @@ import usersRoute from './routes/users.js';
 
 const app = express();
 
-app.use(cors()); 
+app.use(cors(corsOptions)); 
 app.use(bodyParser.json({ limit: '10mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 app.use(cookieParser());
