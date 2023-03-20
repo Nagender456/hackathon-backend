@@ -41,7 +41,7 @@ export const createFeed = async (req, res) => {
 		return res.sendStatus(403); //invalid token
 	}
 	const body = req.body;
-	if (body.title.length > 100) {
+	if (body.title.length > 500) {
 		return res.status(400).json({message: 'Title is too long'})
 	}
 	body.creatorId = req.userInfo.id;
