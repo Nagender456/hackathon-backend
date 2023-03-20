@@ -8,9 +8,7 @@ export const getFeeds = async (req, res) => {
 		'$and': []
 	}
 	if (req.query.creator) {
-		const foundUser = await User.findOne({username: req.query.creator}, {_id:1}).exec();
-		if (!foundUser) return res.status(200).json([]);
-		query['$and'].push({creator: foundUser._id});
+		query['$and'].push({creatorName: req.query.creator})
 	}
 	if (req.query.query) {
 		query['$and'].push(
