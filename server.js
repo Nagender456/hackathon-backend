@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use('/feeds', feedsRoute);
 app.use('/feed', feedRoute);
 app.use('/user', usersRoute);
-const CONNECTION_URL = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.3csinap.mongodb.net/?retryWrites=true&w=majority`
+const CONNECTION_URL = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.uxzammg.mongodb.net/?retryWrites=true&w=majority`
 // const CONNECTION_URL = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@main-project-cluster.pwxesdh.mongodb.net/?retryWrites=true&w=majority`;
 const PORT = process.env.PORT || 5000;
 mongoose.set('strictQuery', true);
